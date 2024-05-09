@@ -6,7 +6,7 @@
 
 ### Interactive Overworld Map
 
-Navigate your tasks through an intuitive, Super Mario World-style overworld map. As you complete tasks, unlock new areas, revealing a path of progression that visually represents your achievements.
+Navigate your tasks through an intuitive, pixel art overworld map. As you complete tasks, unlock new areas, revealing a path of progression that visually represents your achievements.
 
 ### Pixel Art Avatars
 
