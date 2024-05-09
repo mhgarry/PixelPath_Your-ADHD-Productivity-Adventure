@@ -1,0 +1,30 @@
+{
+	"env": {
+		"node": true,
+		"commonjs": true,
+		"es2023": true,
+		"jest": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:node/recommended",
+		"plugin:prettier/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 13
+	},
+	"rules": {
+		"no-console": "warn",
+		"no-eval": "error",
+		"import/first": "error",
+		"node/no-missing-import": "off",
+		"node/no-unsupported-features/es-syntax": [
+			"error",
+			{
+				"ignores": [
+					"modules"
+				]
+			}
+		]
+	}
+}

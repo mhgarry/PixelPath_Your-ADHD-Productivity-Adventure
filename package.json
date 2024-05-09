@@ -1,0 +1,12 @@
+{
+  "name": "pixelpath_your-adhd-productivity-adventure",
+  "version": "1.0.0",
+  "description": "**Pixel Path** is a unique productivity hub, designed by and for individuals with ADHD, to transform task management into an engaging adventure. Combining the charm of pixel art with game-like dynamics, **Pixel Path** motivates and assists users in managing their daily lives effectively and joyfully.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
