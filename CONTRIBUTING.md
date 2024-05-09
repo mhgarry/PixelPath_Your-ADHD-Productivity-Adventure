@@ -142,8 +142,8 @@ Here is the .eslintrc.json configuration for the backend:
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its [![MIT License(https://choosealicense.com/licenses/mit/)]].
+By contributing, you agree that your contributions will be licensed under its Pixel Path is made available under the [MIT License](https://choosealicense.com/licenses/mit/)..
 
 ## References
 
-This document was adapted from the open-source contribution guidelines for [![Facebook's Draft](https://github.com/facebookarchive/draft-js)].
+This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebookarchive/draft-js).

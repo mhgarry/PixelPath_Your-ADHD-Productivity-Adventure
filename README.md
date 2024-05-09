@@ -82,11 +82,11 @@ git push origin your-branch-name
 
 ## 🔗 Links
 
-[![Github](https://img.shields.io/badge/github-000000?style=for-the-badge&logo=github&logoColor=white)(https://github.com/mhgarry)]
+[![Github](https://img.shields.io/badge/github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mhgarry)
 
 ## License
 
-Pixel Path is made available under the [![MIT License](https://choosealicense.com/licenses/mit/)].
+Pixel Path is made available under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 ## Documentation
 
