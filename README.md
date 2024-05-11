@@ -38,7 +38,7 @@ Share your progress with friends or the community and see how others are navigat
 
 ## Tech Stack
 
-**Client**: React, Next.js, TailwindCSS, TailwindUI
+**Client**: React, Next.js, TailwindCSS
 
 **Server**: Node.js, Express, MongoDB, Mongoose
 
