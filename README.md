@@ -71,7 +71,7 @@ Here’s how you can contribute:
   3. **Submit Pull Requests**: If you've developed a feature or fixed an issue, submit a pull request with a clear description of the changes and any relevant issue numbers.
 
 ```bash
-git clone https://github.com/yourusername/PixelPath_Your-ADHD-Productivity-Adventure.git
+git clone https://github.com/mhgarry/PixelPath_Your-ADHD-Productivity-Adventure.git
 cd PixelPath_Your-ADHD-Productivity-Adventure
 git checkout -b your-branch-name
 # Make your changes
