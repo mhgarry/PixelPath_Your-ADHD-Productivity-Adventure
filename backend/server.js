@@ -1,16 +1,26 @@
 const express = require('express');
+const sequelize = require('./config/database');
+const routes = require('./routes');
 const cors = require('cors');
-const PORT = process.env.PORT || 3001;
+require('dotenv').config();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/api', routes);
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${`http://localhost:${PORT}`}`);
-});
+const PORT = process.env.PORT || 8080;
+
+sequelize
+  .sync()
+  .then(() => {
+    console.log('Database synced');
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  });
