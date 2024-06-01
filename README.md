@@ -40,7 +40,7 @@ Share your progress with friends or the community and see how others are navigat
 
 **Client**: React, Next.js, TailwindCSS
 
-**Server**: Node.js, Express, MongoDB, Mongoose
+**Server**: Node.js, Express, Postgresql, Sequelize
 
 ## Prerequisites
 
