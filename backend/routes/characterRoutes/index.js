@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Character } = require('../../models');
+const { Character } = require('../../models/Character');
 
 router.post('/save', async (req, res) => {
   const { characterData } = req.body;

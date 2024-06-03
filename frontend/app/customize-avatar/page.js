@@ -1,11 +1,9 @@
-import PhaserGame form '../../components/PhaserGame';
+import PhaserGame from '../../components/CharacterCreation';
 
-export default function CharacterCreator() {
+export default function Page() {
   return (
-    <div>
-      <h1>Character Creator</h1>
-
+    <div className="w-full h-full bg-white">
       <PhaserGame />
     </div>
-  )
+  );
 }
