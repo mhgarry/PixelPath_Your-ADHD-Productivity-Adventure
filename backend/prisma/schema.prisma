@@ -12,6 +12,7 @@ model User {
   email      String   @unique
   name       String?
   password   String
+  token      String? // Add this line
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
   signedIn   Boolean  @default(false)
