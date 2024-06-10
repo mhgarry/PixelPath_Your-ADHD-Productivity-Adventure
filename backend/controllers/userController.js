@@ -1,46 +1,52 @@
-const User = require('../models/User');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 require('dotenv').config();
 
-// User registration logic
-exports.register = async (req, res) => {
-  const { username, email, password } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 10);
+const register = async (req, res) => {
+  const { email, name, password } = req.body;
+
   try {
-    const user = await User.create({
-      username,
-      email,
-      password: hashedPassword,
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await prisma.user.create({
+      data: {
+        email,
+        name,
+        password: hashedPassword,
+      },
     });
-    res.status(201).json({ user });
-    console.log('User created');
+    res.status(201).json(user);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).json({ error: 'User registration failed' });
   }
 };
 
-// user login logic
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
+
   try {
-    const user = await User.findOne({
-      where: {
-        email,
-      },
-    });
-    if (user && (await bcrypt.compare(password, user.password))) {
-      const token = jwt.sign(
-        {
-          id: user.id,
-        },
-        process.env.JWT_SECRET,
-        { expiresIn: '1h' }
-      );
-      res.status(200).json({ token, message: 'User logged in' });
-      console.log('User logged in');
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
     }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ error: 'Invalid password' });
+    }
+
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+      expiresIn: '1h',
+    });
+
+    res.json({ token });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(500).json({ error: 'Login failed' });
   }
+};
+
+module.exports = {
+  register,
+  login,
 };
