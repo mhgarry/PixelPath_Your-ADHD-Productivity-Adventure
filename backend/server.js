@@ -39,8 +39,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 8080;
 
 // Routes
-const userRoutes = require('./routes/userRoutes');
-app.use('/api/users', userRoutes);
+const routes = require('./routes');
+app.use('/api', routes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
