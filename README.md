@@ -53,7 +53,8 @@ Ensure you have the following installed before starting local development:
 
 **Pixel Path** is still in early development. However, you can install and run it locally using the following commands:
 
-> ```bash
+>
+    ```bash
     git clone https://github.com/mhgarry/PixelPath_Your-ADHD-Productivity-Adventure.git
     cd PixelPath_Your-ADHD-Productivity-Adventure
     npm install
