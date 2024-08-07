@@ -54,7 +54,8 @@ Ensure you have the following installed before starting local development:
 **Pixel Path** is still in early development. However, you can install and run it locally using the following commands:
 
 >
-    ```bash
+    ```
+    bash
         git clone https://github.com/mhgarry/PixelPath_Your-ADHD-Productivity-Adventure.git
         cd PixelPath_Your-ADHD-Productivity-Adventure
         npm install
@@ -72,7 +73,8 @@ Here’s how you can contribute:
   3. **Submit Pull Requests**: If you've developed a feature or fixed an issue, submit a pull request with a clear description of the changes and any relevant issue numbers.
 
 >
-    ```bash
+    ```
+     bash
          git clone https://github.com/mhgarry/PixelPath_Your-ADHD-Productivity-Adventure.git
          cd PixelPath_Your-ADHD-Productivity-Adventure
          git checkout -b your-branch-name
